@@ -101,10 +101,10 @@ body{
 
 /* Logo Group Style */
 .logo_group{
-  display: grid;
-  grid-template-columns: repeat(7, 50px);
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 70px;
   border: 1px solid #ddd;
   padding: 20px 0;
@@ -113,7 +113,7 @@ body{
 }
 .logo_group img{
   /* max-width: 200px; */
-  width: 100%;
+  max-width: 100%;
 }
 
 /* Popular Collection Style */
@@ -141,7 +141,7 @@ body{
   font-weight: 600;
 }
 .imge img{
-  width: 300px;
+  max-width: 300px;
   height: 256px;
   border-radius: 10px;
 }
@@ -171,7 +171,6 @@ body{
   justify-content: space-evenly;
   align-items: center;
   margin-top: 150px;
-  /* margin-bottom: 40px; */
 }
 .feature_image img{
   max-width: 404px;
@@ -197,7 +196,7 @@ body{
 .footer{
   text-align: center;
   background-color: #000000;
-  padding: 20px 0;
+  padding: 20px;
   line-height: 30px;
   margin-top: 100px;
 }
@@ -224,9 +223,6 @@ body{
 }
 
 /* Responsive Style */
-.hide{
-  display: none;
-}
 @media screen and (max-width:576px){
   .navbar,.banner{
     flex-direction: column;
@@ -246,7 +242,7 @@ body{
   }
   /* Logo Section */
   .logo_group{
-    grid-template-columns: repeat(4,50px);
+    flex-wrap: wrap;
     margin-top: 80px;
  }
 /* popoular section */
@@ -257,15 +253,51 @@ body{
  /* feature section */
  .feature_container{
   flex-direction: column;
-  /* margin: 20px auto; */
-  /* padding: 0 50px; */
+  margin-top: 50px;
   margin-left: 40px;
+ }
+ .feature_image{
+  order: 2;
+  margin-top: 20px;
  }
  .feature_content{
   max-width: 404px;
+  order: 1;
  }
-
 }
+
+/* Medium Device Responsive */
+@media screen and (min-width:576px) and (max-width:992px){
+  .navbar,.banner{
+   margin-left: 100px;
+   /* justify-content: space-between; */
+  }
+   /* Logo Section */
+  .logo_group{
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-evenly;
+    margin-left: 100px;
+    /* margin-top: 80px; */
+ }
+ .popular_collection_imgs{
+  grid-template-columns: repeat(2,1fr);
+}
+.img{
+   margin-left: 25px;
+ }
+ .popular_collection_p,.popular_collections_h3,.popular_collection_span,.popular_collection_p,.all_star{
+  margin-left: 22px;
+}
+.feature_content{
+  max-width: 400px;
+}
+/* .footer{
+  max-width: 100%;
+   */
+}
+  
+  
+
 
 
 
