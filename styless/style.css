@@ -193,9 +193,14 @@ body{
 }
 
 /* Footer Style */
-.footer{
-  text-align: center;
+footer{
   background-color: #000000;
+  width: 100%;
+
+}
+.footer{
+
+  text-align: center;
   padding: 20px;
   line-height: 30px;
   margin-top: 100px;
@@ -244,6 +249,7 @@ body{
   .logo_group{
     flex-wrap: wrap;
     margin-top: 80px;
+    border: none;
  }
 /* popoular section */
 .popular_collection_imgs{
@@ -270,14 +276,12 @@ body{
 @media screen and (min-width:576px) and (max-width:992px){
   .navbar,.banner{
    margin-left: 100px;
-   /* justify-content: space-between; */
   }
    /* Logo Section */
   .logo_group{
     grid-template-columns: repeat(5,1fr);
     justify-content: space-evenly;
     margin-left: 100px;
-    /* margin-top: 80px; */
  }
  .popular_collection_imgs{
   grid-template-columns: repeat(2,1fr);
@@ -292,8 +296,9 @@ body{
   max-width: 400px;
 }
 /* .footer{
-  max-width: 100%;
-   */
+ 
+} */
+ 
 }
   
   
